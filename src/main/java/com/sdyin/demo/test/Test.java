@@ -5,4 +5,8 @@ package com.sdyin.demo.test;
  * @Date: 2018/6/1 16:38
  */
 public class Test {
+
+    public static void main(String[] args) {
+        System.out.println("test upload");
+    }
 }
