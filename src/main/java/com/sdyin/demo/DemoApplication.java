@@ -13,7 +13,7 @@ public class DemoApplication {
     SpringApplication.run(DemoApplication.class, args);
   }
 
-	@RequestMapping(value="test")
+	@RequestMapping(value="/demo")
 	public String test(){
 		return "test";
 	}

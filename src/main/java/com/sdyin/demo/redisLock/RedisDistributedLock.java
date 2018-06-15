@@ -117,7 +117,9 @@ public class RedisDistributedLock extends AbstractDistributedLock {
     return false;
   }
 
+  public static void main(String[] args) {
 
+  }
 
 
 }
