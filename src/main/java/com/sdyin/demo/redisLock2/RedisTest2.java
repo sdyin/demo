@@ -39,6 +39,7 @@ public class RedisTest2 {
     //设置空闲时池中保有的最大连接数
     config.setMaxIdle(10);
     //2.设置连接池对象
+    config.setTestOnBorrow(true);
     JedisPool pool = new JedisPool(config,"172.30.1.211",6379,2000,"iboxpay");
     //3.从池中获取连接对象
     Jedis jedis = pool.getResource();
