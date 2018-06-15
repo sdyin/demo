@@ -1,0 +1,23 @@
+
+application:
+  name: sdyinTest
+
+server:
+  port: 9999
+
+redis:
+        host: 172.30.1.211
+        port: 6379
+        password: iboxpay
+        database: 0
+        pool:
+            max-active: 50
+            maxTotal: 50
+            max-idle: 10
+            min-idle: 3
+            max-wait: -1
+            testWhileIdle: true
+            minEvictableIdleTimeMillis: 60000
+            timeBetweenEvictionRunsMillis: 30000
+            numTestsPerEvictionRun: 3
+        timeout: 1000
