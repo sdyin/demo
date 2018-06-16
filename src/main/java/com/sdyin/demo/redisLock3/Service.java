@@ -32,6 +32,11 @@ public class Service {
     String identifier = lock.lockWithTimeout("resource", 5000, 1000);
     System.out.println(Thread.currentThread().getName() + "获得了锁");
     System.out.println(--n);
+    try {
+      Thread.sleep(1000);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
     lock.releaseLock("resource", identifier);
   }
 }

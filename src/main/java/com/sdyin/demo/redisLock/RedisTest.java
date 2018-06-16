@@ -3,6 +3,7 @@ package com.sdyin.demo.redisLock;
 import org.springframework.data.redis.core.RedisTemplate;
 
 /**
+ * 测试可用
  * @Author: liuye
  * @Date: 2018/6/15 15:53
  */
