@@ -13,10 +13,10 @@ import java.util.Date;
 @Service
 public class ScheduledTaskService {
 
-  @Scheduled(fixedRate = 5000)
+  //@Scheduled(fixedRate = 10000)
   public void reportCurrentTime(){
     SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-    System.out.println("每隔5s执行一次:"+ sdf.format(new Date()));
+    System.out.println("每隔10s执行一次:"+ sdf.format(new Date()));
   }
 
   @Scheduled(cron = "0 45 13 ? * *" )

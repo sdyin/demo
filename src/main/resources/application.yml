@@ -4,6 +4,11 @@ application:
 
 server:
   port: 9999
+#  ssl:
+#    key-store: .keystore
+#    key-store-password: lynzsjy311
+#    key-store-type: JKS
+#    key-alias: tomcat
 
 redis:
         host: 172.30.1.211
