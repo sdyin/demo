@@ -10,6 +10,7 @@ public class Test {
 
   public static void main(String[] args) {
     final String test = "TEST";
+    System.out.println("Test");
     System.out.println(System.nanoTime());
   }
 
