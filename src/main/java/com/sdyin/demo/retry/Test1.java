@@ -2,6 +2,7 @@ package com.sdyin.demo.retry;
 
 import org.springframework.retry.annotation.Backoff;
 import org.springframework.retry.annotation.EnableRetry;
+import org.springframework.retry.annotation.Recover;
 import org.springframework.retry.annotation.Retryable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -38,5 +39,10 @@ public class Test1 {
   public void test(){
     System.out.println("执行测试");
     System.out.println(1/0);
+  }
+
+  @Recover
+  public void recover(){
+    System.out.println("重试均异常,结束");
   }
 }
