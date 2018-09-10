@@ -2,6 +2,8 @@
 application:
   name: sdyinTest
 
+
+
 server:
   port: 9999
 #  ssl:
