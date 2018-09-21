@@ -1,6 +1,7 @@
 package com.sdyin.demo.java.lock;
 
 /**
+ *  演示不可重入锁
  * @author: liuye
  * @Date: 2018/9/21 17:53
  * @Description
