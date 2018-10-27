@@ -1,11 +1,15 @@
+javamelody:
+    enabled: true
+
 
 application:
   name: sdyinTest
 
 
-
 server:
   port: 9999
+  servlet:
+    context-path: /
 #  ssl:
 #    key-store: .keystore
 #    key-store-password: lynzsjy311
@@ -13,18 +17,20 @@ server:
 #    key-alias: tomcat
 
 redis:
-        host: 172.30.1.211
-        port: 6379
-        password: iboxpay
-        database: 0
-        pool:
-            max-active: 50
-            maxTotal: 50
-            max-idle: 10
-            min-idle: 3
-            max-wait: -1
-            testWhileIdle: true
-            minEvictableIdleTimeMillis: 60000
-            timeBetweenEvictionRunsMillis: 30000
-            numTestsPerEvictionRun: 3
-        timeout: 1000
+  host: 120.79.23.207
+  port: 16379
+  database: 0
+  pool:
+      max-active: 50
+      maxTotal: 50
+      max-idle: 10
+      min-idle: 3
+      max-wait: -1
+      testWhileIdle: true
+      minEvictableIdleTimeMillis: 60000
+      timeBetweenEvictionRunsMillis: 30000
+      numTestsPerEvictionRun: 3
+  timeout: 1000
+
+
+
