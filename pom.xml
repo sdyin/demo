@@ -147,6 +147,7 @@
 			<scope>compile</scope>
 		</dependency>
 
+		<!-- javaMelody-->
 		<dependency>
 			<groupId>net.bull.javamelody</groupId>
 			<artifactId>javamelody-core</artifactId>
