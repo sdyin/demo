@@ -115,7 +115,7 @@ public class AESUtils {
   }
 
   public static void main(String[] args) {
-    String content = "1234567";
+    String content = "1234567111111111111111111111111111111111111111111111111122222222222222222222222222222222222222222222223333333333333333333333333333";
     String encodeStr = AESUtils.AESEncode(AESKey, content);
     System.out.println("加密后："+encodeStr);
     String decodeStr = AESUtils.AESDncode(AESKey, encodeStr);
