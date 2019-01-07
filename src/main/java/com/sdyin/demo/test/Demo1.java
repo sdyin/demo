@@ -15,6 +15,5 @@ public class Demo1 {
     System.out.println("add demo4");
     System.out.println("add demo5");
     System.out.println("add demo6");
-    System.out.println("add demo7");
   }
 }
