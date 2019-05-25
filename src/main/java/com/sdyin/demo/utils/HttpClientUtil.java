@@ -1,6 +1,7 @@
-package org.killbill.billing.plugin.catalog.test.utils;
+package com.sdyin.demo.utils;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.google.common.base.Throwables;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.*;
@@ -27,8 +28,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.net.ssl.SSLContext;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.URISyntaxException;
 import java.nio.charset.Charset;
 import java.nio.charset.CodingErrorAction;
@@ -336,6 +336,32 @@ public class HttpClientUtil {
         } catch (Exception e) {
             LOGGER.warn("HttpClientUil ## 初始化HttpClient配置失败 : ", Throwables.getStackTraceAsString(e));
         }
+    }
+
+    public static void main(String[] args) {
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("orgRecordId","0");
+        String url = "http://localhost:8082/bill/product/v1/queryProductList";
+        HttpResponse httpResponse = null;
+        try {
+            httpResponse = HttpClientUtil.doGet(url, map);
+        } catch (HttpException e) {
+            e.printStackTrace();
+        }
+        String line= null;
+        JSONObject resultJsonObject = null;
+        StringBuilder entityStringBuilder=new StringBuilder();
+        try {
+            BufferedReader b = new BufferedReader(new InputStreamReader(httpResponse.getEntity().getContent(), "UTF-8"), 8 * 1024);
+            while ((line = b.readLine()) != null) {
+                entityStringBuilder.append(line + "/n");
+            }
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("content:"+ entityStringBuilder.toString());
     }
 
 }
