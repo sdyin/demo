@@ -179,6 +179,11 @@
 			<version>1.2.28</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-actor_2.13</artifactId>
+			<version>2.5.23</version>
+		</dependency>
 	</dependencies>
 
 
