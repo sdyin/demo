@@ -11,5 +11,6 @@ public class Demo2 {
 
         System.out.println("git cherry-pick commit1");
         System.out.println("git cherry-pick commit2");
+        System.out.println("git cherry-pick commit3");
     }
 }
