@@ -4,14 +4,11 @@ package com.sdyin.demo.testrsa;
  * @Author: liuye
  * @Date: 2018/6/12 12:35
  */
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-import com.sun.org.apache.xml.internal.security.utils.Base64;
+
+
+import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
+
+import java.io.*;
 /**
  * <p>
  * BASE64编码解码工具包
@@ -41,7 +38,7 @@ public class Base64Utils {
    * @throws Exception
    */
   public static byte[] decode(String base64) throws Exception {
-    return Base64.decode(base64.getBytes());
+    return Base64.decode(base64.getBytes().toString());
   }
 
   /**
