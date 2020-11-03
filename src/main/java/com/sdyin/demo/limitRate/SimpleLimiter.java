@@ -19,7 +19,7 @@ public class SimpleLimiter {
     // 下一令牌产生时间
     long next = System.nanoTime();
     // 发放令牌间隔：纳秒
-    long interval = 1000_000_000;
+    long interval = 1000 * 1000 * 1000;
 
     // 请求时间在下一令牌产生时间之后, 则
     // 1. 重新计算令牌桶中的令牌数
