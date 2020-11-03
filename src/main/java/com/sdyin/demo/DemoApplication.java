@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class DemoApplication {
 
-  public static void main(String[] args) {
-    SpringApplication.run(DemoApplication.class, args);
-  }
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
 
-	@RequestMapping(value="/demo")
-	public String test(){
-		return "test";
-	}
+    @RequestMapping(value = "/demo")
+    public String test() {
+        return "test";
+    }
 
 
 }
